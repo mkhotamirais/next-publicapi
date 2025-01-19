@@ -26,9 +26,9 @@ export default function OmdbCard({ item }: { item: OmdbSearchType }) {
         className="group-hover:object-contain group-hover:scale-95 h-72 w-full object-cover object-center transition-all duration-150"
         priority
       />
-      <h2 className="text-white text-center p-2 min-h-20 flex items-center justify-center bg-gradient-to-t from-[rgba(0,0,0,.5)] to-[rgba(255,255,255,.1)]">
+      <h3 className="text-white text-center p-2 min-h-20 flex items-center justify-center bg-gradient-to-t from-[rgba(0,0,0,.5)] to-[rgba(255,255,255,.1)]">
         {item.Title}
-      </h2>
+      </h3>
     </motion.div>
   );
 }

@@ -106,10 +106,6 @@ export type ReqresUserType = {
 };
 
 // Tmdb
-export const url = "https://api.themoviedb.org/3";
-export const imagePrefix = "https://image.tmdb.org/t/p/original";
-export const tmdbApiKey = process.env.TMDB_API_KEY;
-
 export type TmdbMovie = {
   adult: boolean;
   backdrop_path: string;
@@ -126,3 +122,33 @@ export type TmdbMovie = {
   vote_average: number;
   vote_count: number;
 };
+
+// Sisko
+export interface SiskoProductType {
+  id: string;
+  name: string;
+  photo: string;
+  price: string;
+  weight: string;
+}
+
+export interface SiskoCartItems extends SiskoProductType {
+  qty: number;
+  createdAt: string;
+  weight: string;
+  checked: boolean;
+}
+
+export interface SiskoProductSingle {
+  product_id: string;
+  product_name: string;
+  product_img: string;
+  product_price: string;
+  product_status: string;
+  product_description: string;
+  product_code: string;
+  product_buy_price: string;
+  product_weight: string;
+  variant_kewyord_id: number;
+  variant_kewyord_value: string;
+}

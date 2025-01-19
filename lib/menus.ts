@@ -19,5 +19,8 @@ export const mediaStackUrl = "https://api.mediastack.com/v1/news";
 // export const newsApiUrl = "https://newsapi.org/v2";
 export const omdbApiUrl = "https://www.omdbapi.com";
 export const reqresUrl = "https://reqres.in/api";
-export const siskoUrl = "https://sisko.io";
-export const tmdbUrl = "https://www.themoviedb.org";
+export const siskoUrl = "https://sistemtoko.com/public";
+// src={`https://sistemtoko.com/img/user/${query.type}/product/${single?.product_img}`}
+export const tmdbUrl = "https://api.themoviedb.org/3";
+
+// export const urlImg = "https://sistemtoko.com/img/user/hijja/product/";

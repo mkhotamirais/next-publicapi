@@ -1,7 +1,7 @@
-import { PiSpinner } from "react-icons/pi";
 import OmdbList from "./omdb-list";
-import { OmdbSearch } from "./omdb-query";
+import { OmdbSearch, OmdbType } from "./omdb-query";
 import { Suspense } from "react";
+import Pending from "@/components/Pending";
 
 // { params: Promise<{ id: string }> }
 
@@ -12,18 +12,12 @@ export default async function OmdbapiPage({ searchParams }: { searchParams: Prom
   return (
     <div className="max-w-screen-xl mx-auto p-4">
       <h1>Omdbapi</h1>
-      <div>
+      <div className="flex gap-2 flex-wrap">
         <OmdbSearch />
+        <OmdbType />
       </div>
       <div>
-        <Suspense
-          key={`${s}-${type}-${y}-${plot}`}
-          fallback={
-            <div className="flex items-center justify-center mt-24">
-              <PiSpinner size={48} className="animate-spin" />
-            </div>
-          }
-        >
+        <Suspense key={`${s}-${type}-${y}-${plot}`} fallback={<Pending />}>
           <OmdbList sp={sp} />
         </Suspense>
       </div>

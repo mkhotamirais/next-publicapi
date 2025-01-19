@@ -11,7 +11,15 @@ export default async function OmdbList({ sp }: { sp: Record<string, string> }) {
   const result = data?.Search as OmdbSearchType[];
 
   return (
-    <div>
+    <div className="mt-4">
+      {sp.s && (
+        <div>
+          Result for{" "}
+          <i>
+            <b>{sp.s}</b>
+          </i>
+        </div>
+      )}
       {result ? (
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-1 py-2">
           {result.map((item, i) => (
