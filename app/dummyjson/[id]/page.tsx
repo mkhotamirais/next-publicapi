@@ -1,14 +1,8 @@
 import { dummyJsonUrl } from "@/lib/menus";
 
-interface DummyJsonIdPageProps {
-  params: {
-    id: string;
-  };
-}
-
-export default async function DummyJsonIdPage({ params }: DummyJsonIdPageProps) {
+export default async function DummyJsonIdPage({ params }: { params: Promise<{ id: string }> }) {
   //   await new Promise((resolve) => setTimeout(resolve, 1000));
-  const id = params.id;
+  const id = (await params).id;
   const response = await fetch(`${dummyJsonUrl}/posts/${id}`);
   const data = await response.json();
 
