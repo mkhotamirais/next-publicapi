@@ -16,9 +16,9 @@ export const metadata: Metadata = {
   title: {
     absolute: "", // menimpa semua value yang lain
     default: "Next Publicapi", // default untuk page ini dan childnya
-    template: "%s | Tamipublicapi", // nilai dinamis tergantung childnya
+    template: "%s | Next Publicapi", // nilai dinamis tergantung childnya
   },
-  description: "Description tami public api",
+  description: "Description next public api",
 };
 
 export default function RootLayout({
