@@ -4,7 +4,7 @@ import Image from "next/image";
 import moment from "moment";
 import { MsNewsType } from "@/lib/types";
 
-export const apiKey = process.env.MEDIASTACK_API_KEY;
+const apiKey = process.env.MEDIASTACK_API_KEY;
 
 export default async function MediastackPage() {
   const response = await fetch(`${mediaStackUrl}?access_key=${apiKey}`);
